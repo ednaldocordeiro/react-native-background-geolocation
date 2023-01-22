@@ -1,6 +1,6 @@
 {
   "name": "@mak12/react-native-background-geolocation",
-  "version": "0.7.0",
+  "version": "0.7.2",
   "description": "Optimized background location tracking",
   "main": "./index.js",
   "types": "./index.d.ts",
@@ -28,14 +28,9 @@
   ],
   "author": "Marian Hello",
   "maintainers": [
-    {
-      "email": "darron1217@gmail.com",
-      "name": "Darron Park"
-    },
-    {
-      "email": "hariks@zoho.com",
-      "name": "Hariks"
-    }
+    "Darron Park <darron1217@gmail.com>",
+    "Hariks <hariks@zoho.com>",
+    "Malik Kawee <malik.kawee4@gmail.com>"
   ],
   "license": "Apache-2.0",
   "bugs": {
@@ -43,6 +38,7 @@
   },
   "homepage": "https://github.com/mak12/react-native-background-geolocation#readme",
   "dependencies": {
+    "@mak12/react-native-background-geolocation": "^0.7.1",
     "plist": "^3.0.1"
   },
   "peerDependencies": {
