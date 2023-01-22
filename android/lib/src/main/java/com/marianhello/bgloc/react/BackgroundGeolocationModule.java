@@ -47,6 +47,7 @@ public class BackgroundGeolocationModule extends ReactContextBaseJavaModule impl
 
     private BackgroundGeolocationFacade facade;
     private org.slf4j.Logger logger;
+    private ReactApplicationContext currentContext;
 
     public static class ErrorMap {
         public static ReadableMap from(String message, int code) {
@@ -85,6 +86,7 @@ public class BackgroundGeolocationModule extends ReactContextBaseJavaModule impl
     public BackgroundGeolocationModule(ReactApplicationContext reactContext) {
         super(reactContext);
         reactContext.addLifecycleEventListener(this);
+        currentContext = reactContext;
 
         facade = new BackgroundGeolocationFacade(getContext(), this);
         logger = LoggerManager.getLogger(BackgroundGeolocationModule.class);
@@ -323,7 +325,7 @@ public class BackgroundGeolocationModule extends ReactContextBaseJavaModule impl
     }
 
     private void sendEvent(String eventName, Object params) {
-        getReactApplicationContext()
+        currentContext
                 .getJSModule(DeviceEventManagerModule.RCTDeviceEventEmitter.class)
                 .emit(eventName, params);
     }
@@ -349,7 +351,8 @@ public class BackgroundGeolocationModule extends ReactContextBaseJavaModule impl
     }
 
     public Context getContext() {
-        return getReactApplicationContext().getBaseContext();
+        // return getReactApplicationContext().getBaseContext();
+        return currentContext;
     }
 
     @Override
