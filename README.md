@@ -2,7 +2,7 @@
 
 [![npm](https://img.shields.io/npm/v/@mak12/react-native-background-geolocation?style=flat-square)](https://www.npmjs.com/package/@mak12/react-native-background-geolocation)
 
-> Forked from [@darron1217/react-native-background-geolocation](https://github.com/darron1217/react-native-background-geolocation) due to inactivity.
+> Forked from [@hariks789/react-native-background-geolocation](https://github.com/darron1217/react-native-background-geolocation) due to inactivity.
 > Original Repo: [@mauron85/react-native-background-geolocation](https://github.com/mauron85/react-native-background-geolocation)
 
 ## Installation
