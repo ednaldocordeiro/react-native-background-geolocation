@@ -38,7 +38,7 @@
   },
   "homepage": "https://github.com/mak12/react-native-background-geolocation#readme",
   "dependencies": {
-    "@ednaldocordeiro/react-native-background-geolocation": "^0.7.5",
+    "@mak12/react-native-background-geolocation": "^0.7.5",
     "plist": "^3.0.1"
   },
   "peerDependencies": {
