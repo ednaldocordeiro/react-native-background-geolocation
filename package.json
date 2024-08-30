@@ -1,17 +1,17 @@
 {
-  "name": "@mak12/react-native-background-geolocation",
+  "name": "@ednaldocordeiro/react-native-background-geolocation",
   "version": "0.7.7",
   "description": "Optimized background location tracking",
   "main": "./index.js",
   "types": "./index.d.ts",
   "scripts": {
-    "link": "@mak12/react-native-background-geolocation/scripts/postlink.js",
-    "unlink": "@mak12/react-native-background-geolocation/scripts/postunlink.js",
+    "link": "@ednaldocordeiro/react-native-background-geolocation/scripts/postlink.js",
+    "unlink": "@ednaldocordeiro/react-native-background-geolocation/scripts/postunlink.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mak12/react-native-background-geolocation.git"
+    "url": "git+https://github.com/ednaldocordeiro/react-native-background-geolocation.git"
   },
   "keywords": [
     "gps",
