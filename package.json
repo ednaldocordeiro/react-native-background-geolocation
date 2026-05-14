@@ -43,5 +43,11 @@
   },
   "peerDependencies": {
     "react-native": ">=0.60.5"
+  },
+  "devDependencies": {
+    "@expo/config-plugins": "^55.0.7"
+  },
+  "expo": {
+    "plugin": "./app.plugin.js"
   }
 }

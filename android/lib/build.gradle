@@ -1,3 +1,15 @@
+buildscript {
+    def kotlin_version = rootProject.hasProperty('kotlinVersion') ? rootProject.kotlinVersion : '1.8.22'
+    repositories {
+        google()
+        mavenCentral()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:7.3.1'
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+    }
+}
+
 // Notice: Oreo builds are disabled by default until all problems are resolved!!!
 //
 // For Oreo compatibility we are forced to use supportLibVersion >= 26.1.0
@@ -25,6 +37,7 @@
 // their templates.
 
 apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
 
 apply from: '../common/VERSIONS.gradle'
 def hasApp = findProject(':app') != null
@@ -47,12 +60,8 @@ def projDependencies = [
 ]
 
 repositories {
-    // Google dependencies are now hosted at Maven
-    // unfortunately this is ignored when installing as react-native plugin
-    maven {
-        url 'https://maven.google.com'
-    }
-    jcenter()
+    google()
+    mavenCentral()
 }
 
 android {
@@ -81,7 +90,12 @@ android {
     }
 }
 
+
+
 dependencies {
+    def kotlin_version = rootProject.hasProperty('kotlinVersion') ? rootProject.kotlinVersion : '1.8.22'
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
+
     implementation project(path: ':@ednaldocordeiro_react-native-background-geolocation-common')
 
     projDependencies.each {

@@ -1,14 +1,13 @@
 
 buildscript {
+    ext.kotlin_version = '1.8.22'
     repositories {
-        maven {
-            url 'https://maven.google.com/'
-            name 'Google'
-        }
+        google()
         mavenCentral()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:3.4.1'
+        classpath 'com.android.tools.build:gradle:7.3.1'
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
     }
 }
 
@@ -19,15 +18,12 @@ allprojects {
             // All of React Native (JS, Obj-C sources, Android binaries) is installed from npm
             url "$rootDir/../node_modules/react-native/android"
         }
-        maven {
-            url 'https://maven.google.com/'
-            name 'Google'
-        }
+        google()
         mavenCentral()
         // repo for react-native
         // https://mvnrepository.com/artifact/com.facebook.react/react-native?repo=springio-plugins-release
         maven {
-            url 'http://repo.spring.io/plugins-release/'
+            url 'https://repo.spring.io/plugins-release/'
             name 'Spring Plugins'
         }
     }
@@ -35,6 +31,10 @@ allprojects {
 
 ext {
     reactNativeLibVersion = "0.55.3"
+    compileSdkVersion = 31
+    targetSdkVersion = 31
+    buildToolsVersion = "31.0.0"
+    minSdkVersion = 16
 }
 
 task clean(type: Delete) {
